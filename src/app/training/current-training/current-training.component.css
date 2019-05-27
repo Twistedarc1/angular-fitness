@@ -1,0 +1,6 @@
+.current-training {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
