@@ -43,6 +43,7 @@
         [max]="maxDate"
         ngModel
         name="birthday"
+        required
       />
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
@@ -50,6 +51,14 @@
     <mat-checkbox ngModel required color="primary" name="agree"
       >Agree to Terms and Conditions</mat-checkbox
     >
-    <button mat-raised-button type="submit" color="primary">Submit</button>
+    <button
+      mat-raised-button
+      type="submit"
+      color="primary"
+      class="submit-btn"
+      [disabled]="f.invalid"
+    >
+      Submit
+    </button>
   </form>
 </section>
