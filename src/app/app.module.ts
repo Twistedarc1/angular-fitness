@@ -18,6 +18,9 @@ import { SidenavListComponent } from "./navigation/sidenav-list/sidenav-list.com
 import { StopTrainingComponent } from "./training/current-training/stop-training.component";
 import { AuthService } from "./auth/auth.service";
 import { ExerciseService } from "./training/exercise.service";
+import { AngularFireModule } from "angularfire2";
+import { AngularFirestoreModule } from "angularfire2/firestore";
+import { environment } from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { ExerciseService } from "./training/exercise.service";
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [AuthService, ExerciseService],
   bootstrap: [AppComponent],
