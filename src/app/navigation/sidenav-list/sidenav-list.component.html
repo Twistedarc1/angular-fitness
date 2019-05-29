@@ -1,20 +1,20 @@
 <mat-nav-list>
-  <mat-list-item>
+  <mat-list-item *ngIf="!isAuth">
     <a routerLink="/signup" (click)="sidenav.close()"
       ><mat-icon>face</mat-icon><span class="nav-caption">Signup</span>
     </a>
   </mat-list-item>
-  <mat-list-item>
+  <mat-list-item *ngIf="!isAuth">
     <a routerLink="/login" (click)="sidenav.close()"
       ><mat-icon>vpn_key</mat-icon><span class="nav-caption">Login</span>
     </a>
   </mat-list-item>
-  <mat-list-item>
+  <mat-list-item *ngIf="isAuth">
     <a routerLink="/training" (click)="sidenav.close()"
       ><mat-icon>mic</mat-icon><span class="nav-caption">Training</span>
     </a>
   </mat-list-item>
-  <mat-list-item>
+  <mat-list-item *ngIf="isAuth">
     <button mat-button>
       <mat-icon>eject</mat-icon><span class="nav-caption">Logout</span>
     </button>

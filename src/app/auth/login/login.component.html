@@ -1,3 +1,47 @@
-<p>
-  login works!
-</p>
+<section class="login-section">
+  <form class="login-form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <mat-form-field>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="email"
+        matInput
+        ngModel
+        email
+        required
+        #emailInput="ngModel"
+      />
+      <mat-error *ngIf="emailInput.hasError('required')"
+        >Field must not be empty</mat-error
+      >
+      <mat-error *ngIf="!emailInput.hasError('required')"
+        >Email is invalid.</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field hintLabel="Should be at least 6 characters long">
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="password"
+        matInput
+        ngModel
+        required
+        minLength="6"
+        #pwInput="ngModel"
+      />
+      <mat-error>Has to be at least 6 characters long</mat-error>
+      <mat-hint align="end">{{ pwInput.value?.length }} /6</mat-hint>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      type="submit"
+      color="primary"
+      class="submit-btn"
+      [disabled]="f.invalid"
+    >
+      Submit
+    </button>
+  </form>
+</section>
