@@ -1,3 +1,14 @@
+<div class="filter-input">
+  <mat-form-field>
+    <input
+      matInput
+      type="text"
+      (keyup)="doFilter($event.target.value)"
+      placeholder="Filter"
+    />
+  </mat-form-field>
+</div>
+
 <mat-table matSort [dataSource]="dataSource">
   <ng-container matColumnDef="date">
     <mat-header-cell mat-sort-header *matHeaderCellDef>Date</mat-header-cell>

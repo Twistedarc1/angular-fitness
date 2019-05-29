@@ -1,0 +1,10 @@
+filter-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+mat-form-field {
+  width: 40%;
+}
