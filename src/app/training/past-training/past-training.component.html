@@ -1,23 +1,27 @@
-<mat-table [dataSource]="dataSource">
+<mat-table matSort [dataSource]="dataSource">
   <ng-container matColumnDef="date">
-    <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
+    <mat-header-cell mat-sort-header *matHeaderCellDef>Date</mat-header-cell>
     <mat-cell *matCellDef="let element">{{ element.date | date }}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+    <mat-header-cell mat-sort-header *matHeaderCellDef>Name</mat-header-cell>
     <mat-cell *matCellDef="let element">{{ element.name }}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="calories">
-    <mat-header-cell *matHeaderCellDef>Calories</mat-header-cell>
+    <mat-header-cell mat-sort-header *matHeaderCellDef
+      >Calories</mat-header-cell
+    >
     <mat-cell *matCellDef="let element">{{
       element.calories | number
     }}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="duration">
-    <mat-header-cell *matHeaderCellDef>Duration</mat-header-cell>
+    <mat-header-cell mat-sort-header *matHeaderCellDef
+      >Duration</mat-header-cell
+    >
     <mat-cell *matCellDef="let element">{{
       element.duration | number
     }}</mat-cell>
