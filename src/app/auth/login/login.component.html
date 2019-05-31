@@ -35,6 +35,7 @@
       <mat-hint align="end">{{ pwInput.value?.length }} /6</mat-hint>
     </mat-form-field>
     <button
+      *ngIf="!isLoading"
       mat-raised-button
       type="submit"
       color="primary"
@@ -43,5 +44,7 @@
     >
       Submit
     </button>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    </mat-spinner>
   </form>
 </section>
