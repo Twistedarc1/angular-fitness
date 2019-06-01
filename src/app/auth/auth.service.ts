@@ -6,7 +6,6 @@ import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { AngularFireAuth } from "angularfire2/auth";
 import { ExerciseService } from "../training/exercise.service";
-import { MatSnackBar } from "@angular/material";
 import { UiService } from "../shared/ui.service";
 
 @Injectable()
