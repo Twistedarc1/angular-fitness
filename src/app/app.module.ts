@@ -13,7 +13,7 @@ import { AngularFireModule } from "angularfire2";
 import { environment } from "../environments/environment";
 import { UiService } from "./shared/ui.service";
 import { AuthModule } from "./auth/auth.module";
-import { ExerciseModule } from "./training/exercise.module";
+import { AngularFirestoreModule } from "angularfire2/firestore";
 
 @NgModule({
   declarations: [
@@ -27,9 +27,9 @@ import { ExerciseModule } from "./training/exercise.module";
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
+    AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AuthModule,
-    ExerciseModule
+    AuthModule
   ],
   providers: [AuthService, ExerciseService, UiService],
   bootstrap: [AppComponent]
