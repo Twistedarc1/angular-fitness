@@ -7,7 +7,8 @@ const routes: Routes = [
   { path: "", component: WelcomeComponent },
   {
     path: "training",
-    loadChildren: "./training/exercise.module#ExerciseModule"
+    loadChildren: "./training/exercise.module#ExerciseModule",
+    canLoad: [AuthGuard]
   }
 ];
 
